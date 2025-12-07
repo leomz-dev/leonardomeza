@@ -29,7 +29,7 @@ export default function FeaturedWork() {
     return (
         <section className="section-padding">
             <div className="container-custom">
-                <h2 className="mb-12">Trabajo seleccionado</h2>
+                <h2 className="mb-12">Proyectos <span className="inline-block px-2 pb-3 bg-clip-text text-transparent bg-linear-to-r from-secondary via-secondary/70 to-secondary/40"><i className="text-6xl">favoritos</i></span></h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     {projects.map((project, index) => (

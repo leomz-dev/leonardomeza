@@ -28,11 +28,11 @@ export default function Hero() {
                         <span className="bg-clip-text text-transparent bg-linear-to-r from-secondary via-secondary/70 to-secondary/40"><i className="text-4xl md:text-5xl">
                             Leonardo Meza</i></span>
                         <br />
-                        <span className="text-primary text-xl md:text-2xl lg:text-3xl -mt-3 block">"Vive el hoy, planea el mañana"</span>
+                        <span className="text-primary text-xl md:text-2xl lg:text-3xl -mt-2 block">"Vive el hoy, planea el mañana"</span>
                     </h1>
 
                     <p className="text-base md:text-lg lg:text-xl text-primary mb-8 max-w-2xl mx-auto">
-                        Desarrollo web, diseño de experiencias y soluciones tecnológicas innovadoras desde Colombia.
+                        Tecnologia, Investigacion, Deporte, Recreacion
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
