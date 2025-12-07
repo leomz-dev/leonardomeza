@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import heroImg from "../public/img/heroImgg.png";
+import heroImg from "../public/img/heroBack.png";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Braces, Palette, Lightbulb, Baby, BanknoteArrowUp } from "lucide-react";
 
 
 export default function Hero() {
@@ -50,13 +50,54 @@ export default function Hero() {
                             asChild
                             size="lg"
                             variant="outline"
-                            className="border-primary/50 bg-background text-primary hover:bg-primary/10 hover:text-primary backdrop-blur-sm"
+                            className="border-primary/50 bg-card/30 text-primary hover:bg-primary/10 hover:text-primary backdrop-blur-sm"
                         >
                             <Link href="/contact">
                                 <MessageCircle className="mr-2 h-4 w-4" />
                                 Hablar conmigo
                             </Link>
                         </Button>
+                    </div>
+
+                    {/* Mini Skills Cards */}
+                    <div className="mt-12 flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+                        <div className="group h-12 px-3 py-2 rounded-xl bg-card/30 backdrop-blur-md transition-all duration-500 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                            <div className="flex items-center gap-2 h-full">
+                                <Braces className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                                <div className="h-4 w-px bg-primary/30"></div>
+                                <h4 className="text-xs font-semibold text-primary whitespace-nowrap">Desarrollador</h4>
+                            </div>
+                        </div>
+
+                        <div className="group h-12 px-3 py-2 rounded-xl bg-card/30 backdrop-blur-md transition-all duration-500 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                            <div className="flex items-center gap-2 h-full">
+                                <Palette className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                                <div className="h-4 w-px bg-primary/30"></div>
+                                <h4 className="text-xs font-semibold text-primary whitespace-nowrap">Diseñador</h4>
+                            </div>
+                        </div>
+
+                        <div className="group h-12 px-3 py-2 rounded-xl bg-card/30 backdrop-blur-md transition-all duration-500 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                            <div className="flex items-center gap-2 h-full">
+                                <Lightbulb className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                                <div className="h-4 w-px bg-primary/30"></div>
+                                <h4 className="text-xs font-semibold text-primary whitespace-nowrap">Investigador</h4>
+                            </div>
+                        </div>
+                        <div className="group h-12 px-3 py-2 rounded-xl bg-card/30 backdrop-blur-md transition-all duration-500 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                            <div className="flex items-center gap-2 h-full">
+                                <Baby className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                                <div className="h-4 w-px bg-primary/30"></div>
+                                <h4 className="text-xs font-semibold text-primary whitespace-nowrap">Recreador</h4>
+                            </div>
+                        </div>
+                        <div className="group h-12 px-3 py-2 rounded-xl bg-card/30 backdrop-blur-md transition-all duration-500 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                            <div className="flex items-center gap-2 h-full">
+                                <BanknoteArrowUp className="h-4 w-4 text-primary" strokeWidth={1.5} />
+                                <div className="h-4 w-px bg-primary/30"></div>
+                                <h4 className="text-xs font-semibold text-primary whitespace-nowrap">Emprendedor</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
