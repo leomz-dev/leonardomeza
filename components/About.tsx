@@ -1,21 +1,22 @@
 import Image from "next/image";
 import { Trees, Braces, Zap, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { BackgroundBeams } from "./ui/background-beams";
 
 export default function About() {
     return (
         <section className="section-padding bg-background relative overflow-hidden">
-            <div className="container-custom">
+            <div className="container-custom relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     {/* Left Column: Image */}
                     <div className="relative group animate-slide-up" style={{ animationDelay: "0.1s" }}>
                         <div className="absolute -inset-4 bg-linear-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl hover-lift aspect-square sm:aspect-4/5 lg:aspect-square">
                             <Image
-                                src="/img/heroImg.jpg"
+                                src="/img/aboutImg.png"
                                 alt="Leonardo Meza"
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="object-cover object-[40%_30%] transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
                     </div>
@@ -24,7 +25,7 @@ export default function About() {
                     <div className="flex flex-col space-y-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
                         <div>
                             <h2 className="mb-4 text-4xl font-bold tracking-tight">
-                                Desarrollando <span className="text-secondary"><i className="text-5xl">soluciones</i></span> para un mundo en evolucion
+                                Desarrollando <span className="inline-block px-2 pb-3 bg-clip-text text-transparent bg-linear-to-r from-secondary to-white"><i className="text-5xl">soluciones</i></span> para un mundo en evolucion
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
                                 Me enfoco en resolver problemas complejos con soluciones que sean eficientes y escalables.
@@ -90,6 +91,8 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </section>
+
+            <BackgroundBeams />
+        </section >
     );
 }
