@@ -3,6 +3,9 @@ import Image from "next/image";
 import heroImg from "../public/img/heroBack.png";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Braces, Palette, Lightbulb, Baby, BanknoteArrowUp } from "lucide-react";
+// @ts-ignore
+import Ribbons from "@/components/ui/ribbons";
+import { LogoLoop } from "@/components/ui/carrusel";
 
 
 export default function Hero() {
@@ -18,12 +21,21 @@ export default function Hero() {
                     priority
                     quality={90}
                 />
+            </div>
 
+            {/* Ribbons Background */}
+            <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+                <Ribbons
+                    colors={['#174abd', '#FFD700', '#174abd', '#ffffff']}
+                    baseThickness={20}
+                    baseFriction={0.05}
+                    speedMultiplier={0.5}
+                />
             </div>
 
             {/* Content */}
-            <div className="container-custom relative z-10">
-                <div className="max-w-4xl mx-auto text-center">
+            <div className="container-custom relative z-10 flex flex-col items-center justify-center min-h-screen py-20">
+                <div className="max-w-4xl mx-auto text-center mb-12">
                     <h1 className="text-balance leading-tight">
                         <span className="bg-clip-text text-transparent bg-linear-to-r from-secondary via-secondary/70 to-secondary/40"><i className="text-4xl md:text-5xl">
                             Leonardo Meza</i></span>
@@ -99,6 +111,36 @@ export default function Hero() {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Logo Carousel */}
+                <div className="w-full max-w-4xl mt-8">
+                    <LogoLoop
+                        logos={[
+                            {
+                                node: <Image
+                                    src="/logos/logoMindeporte.png"
+                                    alt="Mindeporte"
+                                    width={120}
+                                    height={60}
+                                    className="object-contain opacity-60 hover:opacity-100 transition-opacity bg-white p-3 rounded"
+                                />
+                            },
+                            {
+                                node: <Image
+                                    src="/logos/logoRedcolsi.png"
+                                    alt="Redcolsi"
+                                    width={120}
+                                    height={60}
+                                    className="object-contain opacity-60 hover:opacity-100 transition-opacity"
+                                />
+                            },
+                        ]}
+                        speed={50}
+                        direction="left"
+                        gap={40}
+                        pauseOnHover={true}
+                    />
                 </div>
             </div>
         </section>

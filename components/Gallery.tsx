@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Camera } from "lucide-react";
+import MasonryGallery from "@/components/ui/mansorygallery";
 
 export default function Gallery() {
     const moments = [
@@ -41,25 +42,15 @@ export default function Gallery() {
             <div className="container-custom">
                 <h2 className="mb-12">Momentos destacados</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {moments.map((moment, index) => (
-                        <Card
-                            key={index}
-                            className="group relative overflow-hidden border-border/50 shadow-sm hover-lift transition-all duration-300 aspect-4/3"
-                        >
-                            {/* Placeholder for image - will be replaced with actual images */}
-                            <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                                <Camera className="h-16 w-16 text-primary/20" strokeWidth={1.5} />
-                            </div>
-
-                            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 className="text-xl mb-2 font-semibold">{moment.title}</h3>
-                                    <p className="text-sm text-white/80">{moment.description}</p>
-                                </div>
-                            </div>
-                        </Card>
-                    ))}
+                <div className="mt-8">
+                    <MasonryGallery
+                        items={moments.map(m => ({
+                            src: m.image,
+                            alt: m.title,
+                            title: m.title,
+                            description: m.description
+                        }))}
+                    />
                 </div>
             </div>
         </section>
