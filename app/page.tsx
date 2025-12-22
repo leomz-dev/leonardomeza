@@ -12,12 +12,11 @@ export default function Home() {
       <Hero />
       <About />
       <FeaturedWork />
-      <Blog />
       <Testimonials />
       <Gallery />
       <div className="fixed bottom-0 left-0 right-0 z-50 pointer-events-none">
         {/* @ts-ignore */}
-        <GradualBlur position="bottom" target="parent" strength={3} height="12rem" />
+        <GradualBlur position="bottom" target="parent" strength={4} height="10rem" />
       </div>
     </main>
   );

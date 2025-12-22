@@ -4,7 +4,6 @@ import Trajectory from "@/components/about/Trajectory";
 import TechSkills from "@/components/about/TechSkills";
 import Education from "@/components/about/Education";
 import MoreAbout from "@/components/about/MoreAbout";
-import FloatingButton from "@/components/about/FloatingButton";
 
 export const metadata: Metadata = {
     title: "Sobre mí - Leonardo Meza",
@@ -19,9 +18,7 @@ export default function AboutPage() {
                 <Trajectory />
                 <TechSkills />
                 <Education />
-                <MoreAbout />
             </main>
-            <FloatingButton />
         </div>
     );
 }
