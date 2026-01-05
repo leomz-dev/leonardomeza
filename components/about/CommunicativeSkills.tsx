@@ -1,10 +1,10 @@
 "use client";
 
-import { Monitor, Server } from "lucide-react";
+import { Users, Globe, Brain, Briefcase } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { gsap, ScrollTrigger } from "@/lib/animations";
 
-export default function TechSkills() {
+export default function CommunicativeSkills() {
     const sectionRef = useRef<HTMLElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const cardsContainerRef = useRef<HTMLDivElement>(null);
@@ -166,10 +166,10 @@ export default function TechSkills() {
                 ref={titleRef}
                 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900 dark:text-white tracking-tight"
             >
-                Habilidades Técnicas en desarrollo
+                Habilidades Comunicativas
             </h2>
             <div ref={cardsContainerRef} className="grid md:grid-cols-2 gap-6">
-                {/* Frontend */}
+                {/* Interpersonal */}
                 <div
                     className="group p-6 rounded-2xl bg-white dark:bg-card-dark/40 backdrop-blur-sm border border-gray-200 dark:border-white/5 hover:border-gray-400 dark:hover:border-zinc-700 transition-all duration-300 cursor-pointer"
                     style={{ transformStyle: "preserve-3d" }}
@@ -177,30 +177,30 @@ export default function TechSkills() {
                     onMouseLeave={(e) => handleCardHover(e, false)}
                 >
                     <div className="flex items-center gap-3 mb-4">
-                        <Monitor className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Frontend</h3>
+                        <Users className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Interpersonales</h3>
                     </div>
                     <ul className="space-y-3">
                         <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
-                            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-3"></span>
-                            React, astro, Next.js
-                        </li>
-                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-3"></span>
-                            javascript, python, node.js, TypeScript
+                            Trabajo en Equipo y Colaboración
                         </li>
                         <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
-                            <span className="w-1.5 h-1.5 rounded-full bg-teal-400 mr-3"></span>
-                            Tailwind CSS, Bootstrap, Shadcn UI
+                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mr-3"></span>
+                            Comunicación Asertiva
                         </li>
                         <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
-                            <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mr-3"></span>
-                            Responsive Design, UX/UI design
+                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-3"></span>
+                            Adaptabilidad y Flexibilidad
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 mr-3"></span>
+                            Liderazgo y Proactividad
                         </li>
                     </ul>
                 </div>
 
-                {/* Backend */}
+                {/* Idiomas */}
                 <div
                     className="group p-6 rounded-2xl bg-white dark:bg-card-dark/40 backdrop-blur-sm border border-gray-200 dark:border-white/5 hover:border-gray-400 dark:hover:border-zinc-700 transition-all duration-300 cursor-pointer"
                     style={{ transformStyle: "preserve-3d" }}
@@ -208,21 +208,83 @@ export default function TechSkills() {
                     onMouseLeave={(e) => handleCardHover(e, false)}
                 >
                     <div className="flex items-center gap-3 mb-4">
-                        <Server className="w-8 h-8 text-green-600 dark:text-green-400" />
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Backend</h3>
+                        <Globe className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Idiomas</h3>
                     </div>
                     <ul className="space-y-3">
                         <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-3"></span>
-                            Node.js & Express
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-3"></span>
+                            Español (Nativo)
                         </li>
                         <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-3"></span>
-                            MongoDB
+                            <span className="w-1.5 h-1.5 rounded-full bg-lime-400 mr-3"></span>
+                            Inglés (Avanzado - B2)
                         </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-500 mr-3"></span>
+                            Lectura Técnica y Documentación
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Resolución de Problemas */}
+                <div
+                    className="group p-6 rounded-2xl bg-white dark:bg-card-dark/40 backdrop-blur-sm border border-gray-200 dark:border-white/5 hover:border-gray-400 dark:hover:border-zinc-700 transition-all duration-300 cursor-pointer"
+                    style={{ transformStyle: "preserve-3d" }}
+                    onMouseEnter={(e) => handleCardHover(e, true)}
+                    onMouseLeave={(e) => handleCardHover(e, false)}
+                >
+                    <div className="flex items-center gap-3 mb-4">
+                        <Brain className="w-8 h-8 text-orange-600 dark:text-orange-400" />
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Resolución de Problemas</h3>
+                    </div>
+                    <ul className="space-y-3">
                         <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
                             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 mr-3"></span>
-                            RESTful APIs
+                            Pensamiento Analítico y Crítico
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mr-3"></span>
+                            Investigación y Documentación
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-400 mr-3"></span>
+                            Creatividad e Innovación
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 mr-3"></span>
+                            Atención al Detalle
+                        </li>
+                    </ul>
+                </div>
+
+                {/* Metodologías */}
+                <div
+                    className="group p-6 rounded-2xl bg-white dark:bg-card-dark/40 backdrop-blur-sm border border-gray-200 dark:border-white/5 hover:border-gray-400 dark:hover:border-zinc-700 transition-all duration-300 cursor-pointer"
+                    style={{ transformStyle: "preserve-3d" }}
+                    onMouseEnter={(e) => handleCardHover(e, true)}
+                    onMouseLeave={(e) => handleCardHover(e, false)}
+                >
+                    <div className="flex items-center gap-3 mb-4">
+                        <Briefcase className="w-8 h-8 text-pink-600 dark:text-pink-400" />
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Metodologías</h3>
+                    </div>
+                    <ul className="space-y-3">
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-pink-500 mr-3"></span>
+                            Agile & Scrum
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mr-3"></span>
+                            Gestión del Tiempo
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 mr-3"></span>
+                            Aprendizaje Autodidacta
+                        </li>
+                        <li className="flex items-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-200 transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-3"></span>
+                            Organización y Planificación
                         </li>
                     </ul>
                 </div>

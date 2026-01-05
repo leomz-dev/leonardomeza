@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Trees, Braces, Zap, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { BackgroundBeams } from "./ui/background-beams";
+import { Button } from "./ui/button";
 import { useRef, useEffect } from "react";
 import { gsap, ScrollTrigger } from "@/lib/animations";
 
@@ -13,6 +14,7 @@ export default function About() {
     const contentRef = useRef<HTMLDivElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
     const featuresRef = useRef<HTMLDivElement>(null);
+    const buttonRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -56,6 +58,31 @@ export default function About() {
                     }
                 );
             }
+        }
+
+        // Button animation below image
+        if (buttonRef.current) {
+            gsap.fromTo(
+                buttonRef.current,
+                {
+                    opacity: 0,
+                    y: 20,
+                    scale: 0.95,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.8,
+                    delay: 0.5, // Slight delay after image starts
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: imageContainerRef.current, // Sync with image value
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
         }
 
         // Title animation with gradient reveal
@@ -206,6 +233,16 @@ export default function About() {
                                 className="object-cover object-[40%_30%] transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
+                        <div ref={buttonRef} className="mt-8 flex justify-center w-full relative z-20">
+                            <Link href="/about">
+                                <Button size="lg" className="group/btn">
+                                    Conoce más sobre mí
+                                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                                </Button>
+                            </Link>
+                        </div>
+
+
                     </div>
 
                     {/* Right Column: Content */}
@@ -261,7 +298,7 @@ export default function About() {
                                         Soy lider formador de mas de 200 jovenes en recreacion, campismo, habilidades para la vida y desarrollo personal.
                                     </p>
                                     <Link
-                                        href="/services"
+                                        href="/about"
                                         className="inline-flex items-center mt-2 text-purple-500 hover:text-purple-400 font-medium text-sm transition-colors"
                                         onMouseEnter={(e) => handleArrowHover(e, true)}
                                         onMouseLeave={(e) => handleArrowHover(e, false)}
@@ -302,6 +339,7 @@ export default function About() {
                                 "Comprometido con la excelencia y el desarrollo personal."
                             </p>
                         </div>
+
                     </div>
                 </div>
             </div>

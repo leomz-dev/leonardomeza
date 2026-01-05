@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import AboutHero from "@/components/about/AboutHero";
 import Trajectory from "@/components/about/Trajectory";
 import TechSkills from "@/components/about/TechSkills";
+import CommunicativeSkills from "@/components/about/CommunicativeSkills";
 import Education from "@/components/about/Education";
 import MoreAbout from "@/components/about/MoreAbout";
 
@@ -17,6 +18,7 @@ export default function AboutPage() {
                 <AboutHero />
                 <Trajectory />
                 <TechSkills />
+                <CommunicativeSkills />
                 <Education />
             </main>
         </div>
